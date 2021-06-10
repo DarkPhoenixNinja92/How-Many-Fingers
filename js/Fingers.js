@@ -1,4 +1,4 @@
-function fingerNum() {
+let fingerNum = () => {
     let userInput = parseFloat(prompt("Please enter a number."));
     let genInput = Math.floor(Math.random() * (10 - 1 + 1) + 1);
     let count = 0;
@@ -21,4 +21,7 @@ function fingerNum() {
     }
     alert("Great job! You got it right.");
 }
-fingerNum();
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("guess").addEventListener('click', fingerNum);
+})
